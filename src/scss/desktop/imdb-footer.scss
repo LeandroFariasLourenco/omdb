@@ -1,0 +1,30 @@
+@import "./../config/imdb-global.scss";
+@import "./../config/imdb-variables.scss";
+@import "./../config/imdb-breakpoints.scss";
+
+@include desktop{
+    footer{
+        .container{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            background: $main-color;
+            &__footer{
+                font-size: .7rem;
+                color: white;
+                span{
+                    &:nth-child(1){
+                        color: cyan;
+                    }
+                    &:nth-child(2){
+                        color: rgb(5, 104, 150);
+                    }
+                    &:nth-child(3){
+                        color: rgb(3, 59, 163);
+                    }
+                }
+            }
+        }
+    }
+}
