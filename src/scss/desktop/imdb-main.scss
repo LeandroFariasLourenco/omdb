@@ -1,0 +1,66 @@
+@import "./../config/imdb-global.scss";
+@import "./../config/imdb-variables.scss";
+@import "./../config/imdb-breakpoints.scss";
+
+@include desktop {
+  .wrapper {
+    min-height: calc(100vh - (110px + 50px));
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 25px 50px;
+    &__search {
+      width: 100%;
+      max-height: 210px;
+      background: rgb(70, 61, 61);
+      display: flex;
+      flex-flow: row wrap;
+      padding: 25px 50px;
+      max-width: 1420px;
+      &__text {
+        text-align: center;
+        width: 100%;
+        color: white;
+        font-size: 1.6rem;
+        letter-spacing: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 50px;
+          margin: 0 10px;
+          background: rgb(90, 87, 87);
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 0 0 5px black;
+        }
+      }
+      &__input {
+        width: 100%;
+        border-radius: 5px 6px 5px 6px;
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 1.2rem;
+        border: none;
+      }
+      &__btn {
+        margin: 0 auto;
+        display: block;
+        padding: 10px 15px;
+        background: rgb(5, 62, 148);
+        color: white;
+        font-size: 1.2rem;
+        box-shadow: rgb(5, 62, 148);
+        border: 1px solid transparent;
+        transition: 400ms;
+        border-radius: 5px;
+        &:hover{
+            transition: 400ms;
+            background: #000000;
+            border: 1px solid cyan ;
+        }
+      }
+    }
+  }
+}
