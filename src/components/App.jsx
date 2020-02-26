@@ -1,6 +1,6 @@
 import React            from 'react'
 import SearchBox        from "./main/SearchBox";
-import { Showcase }     from "./main/Showcase";
+import Showcase         from "./main/Showcase";
 import { store }        from "./../redux/store";
 import { Provider }     from "react-redux";
 

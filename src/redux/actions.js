@@ -14,7 +14,7 @@ const searchMovie = text => dispatch => {
 }
 
 const fetchMovies = text => dispatch => {
-    axios.get(`${API.APIUrl}${API.APIKey}&t=${text}`).then(response => dispatch({
+    axios.get(`${API.APIUrl}${API.APIKey}&s=${text}&type=movie`).then(response => dispatch({
         type: TYPE.FETCH_MOVIES,
         payload: response.data
     }))

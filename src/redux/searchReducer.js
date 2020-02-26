@@ -15,10 +15,11 @@ export default function (state = initialState, action) {
                 text    : action.payload,
                 loading : false
             }
-        case TYPE.FETCH_MOVIES:            
+        case TYPE.FETCH_MOVIES:
+            console.log("Payload",action.payload.Search)            
             return {
                 ...state,
-                movies  : action.payload
+                movies  : action.payload.Search
             }
 
         default:
