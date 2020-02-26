@@ -4,7 +4,7 @@ import React from 'react'
 
 function Header() {
     return (
-        <section class="container">
+        <section className="container">
             {window.innerWidth >= 1240 ? <Desktop/> : <Desktop/>}
         </section>
     )

@@ -36,29 +36,38 @@
           box-shadow: 0 0 5px black;
         }
       }
-      &__input {
+      &__form {
         width: 100%;
-        border-radius: 5px 6px 5px 6px;
-        padding: 10px;
-        margin: 10px 0;
-        font-size: 1.2rem;
-        border: none;
-      }
-      &__btn {
-        margin: 0 auto;
-        display: block;
-        padding: 10px 15px;
-        background: rgb(5, 62, 148);
-        color: white;
-        font-size: 1.2rem;
-        box-shadow: rgb(5, 62, 148);
-        border: 1px solid transparent;
-        transition: 400ms;
-        border-radius: 5px;
-        &:hover{
+        height: auto;
+        &__input {
+          width: 100%;
+          border-radius: 5px 6px 5px 6px;
+          padding: 10px;
+          margin: 10px 0;
+          font-size: 1.2rem;
+          border: 2px solid transparent;
+          transition: border 200ms;
+          &:focus {
+            border: 2px solid black;
+            transition: border 200ms;
+          }
+        }
+        &__btn {
+          margin: 0 auto;
+          display: block;
+          padding: 10px 15px;
+          background: rgb(5, 62, 148);
+          color: white;
+          font-size: 1.2rem;
+          box-shadow: rgb(5, 62, 148);
+          border: 1px solid transparent;
+          transition: 400ms;
+          border-radius: 5px;
+          &:hover {
             transition: 400ms;
             background: #000000;
-            border: 1px solid cyan ;
+            border: 1px solid cyan;
+          }
         }
       }
     }

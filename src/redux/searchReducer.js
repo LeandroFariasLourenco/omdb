@@ -1,10 +1,10 @@
 import { TYPE } from "./actions";
 
 const initialState = {
-    text = '',
-    movies =[],
+    text: '',
+    movies: [],
     loading: false,
-    movie =[]
+    movie: []
 }
 
 export default function (state = initialState, action) {
@@ -12,10 +12,16 @@ export default function (state = initialState, action) {
         case TYPE.SEARCH_MOVIE:
             return {
                 ...state,
-                text: action.payload,
-                loading: false
+                text    : action.payload,
+                loading : false
             }
-            default: 
+        case TYPE.FETCH_MOVIES:            
+            return {
+                ...state,
+                movies  : action.payload
+            }
+
+        default:
             return state;
     }
 };
