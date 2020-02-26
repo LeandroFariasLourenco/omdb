@@ -1,0 +1,106 @@
+@import "./../config/imdb-global.scss";
+@import "./../config/imdb-variables.scss";
+@import "./../config/imdb-breakpoints.scss";
+
+@include mobile {
+  header {
+    .container {
+      padding: 20px 15px;
+      height: 105px;
+      &__header {
+        display: flex;
+        justify-content: space-evenly;
+        &__button {
+          height: 100%;
+          flex-grow: 1;
+          max-width: 65px;
+          display: flex;
+          flex-direction: column;
+          padding: 13px 10px;
+          justify-content: space-evenly;
+          position: relative;
+          &.nav--open {
+            span {
+              &:nth-child(1) {
+                transform: rotate(-45deg);
+                transition: transform 300ms;
+                position: absolute;
+                top: 43%;
+                left: 0;
+                width: 100%;
+                height: 10px;
+              }
+              &:nth-child(2) {
+                opacity: 0;
+                transition: opacity 300ms;
+              }
+              &:nth-child(3) {
+                transform: rotate(45deg);
+                transition: transform 300ms;
+                position: absolute;
+                top: 43%;
+                right: 0;
+                width: 100%;
+                height: 10px;
+              }
+            }
+          }
+          span {
+            transition: 400ms;
+            display: block;
+            width: 100%;
+            flex-grow: 1;
+            background: rgba(82, 76, 76, 0.877);
+            border-radius: 10px;
+            &:nth-child(2) {
+              margin: 5px 0;
+            }
+          }
+        }
+        &__title {
+          height: 100%;
+          flex-grow: 1;
+          margin: 0 10px;
+          display: flex;
+          align-items: center;
+          max-width: fit-content;
+          @media only screen and (max-width: 340px) {
+            margin: 0;
+            font-size: 1.1rem;
+          }
+        }
+        &__icons {
+          height: 100%;
+          flex-grow: 1;
+          height: 100%;
+          max-width: 110px;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          max-width: 70px;
+          img {
+            width: 65px;
+            height: auto;
+            @media only screen and (max-width: 340px) {
+              width: 50px;
+            }
+          }
+        }
+        &__nav {
+          position: fixed;
+          height: calc(100% - 105px);
+          width: 100%;
+          background: rgba(17, 14, 14, 0.808);
+          bottom: 0;
+          transform: translateX(0%);
+          transition: transform 200ms;
+          &.closed {
+            transform: translateX(-100%);
+            transition: transform 300ms;
+          }
+        }
+      }
+    }
+  }
+}
