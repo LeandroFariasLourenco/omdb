@@ -7,6 +7,7 @@ const EmptySearch = props => {
             <img src={emptyImg} alt="" />
             <span>Sorry, there were no results found for</span> 
             <span>{props.text}</span>
+            <span>Try searching again!</span>
         </div>
     )
 }

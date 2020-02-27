@@ -4,7 +4,7 @@ import { EmptySearch } from "./EmptySearch.jsx";
 import MovieCard from "./MovieCard";
 
 export class Movies extends Component {
-    render() {
+    render() {  
         const { movies } = this.props;
         let content;
         

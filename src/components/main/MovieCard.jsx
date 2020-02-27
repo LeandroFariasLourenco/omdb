@@ -5,10 +5,6 @@ export class MovieCard extends Component {
         function loadElement (elementToLazy) {
             const src = elementToLazy.getAttribute("data-src");
             elementToLazy.setAttribute("src",src);
-            console.log(src);
-            setTimeout(() => {
-                elementToLazy.setAttribute("data-src",'');
-            }, 1000)
         }
         const lazyElements = document.querySelectorAll("[data-src]");
         
@@ -46,13 +42,13 @@ export class MovieCard extends Component {
     }
 
     componentDidUpdate(){
+        console.log("ATUALIZOU");        
         this.updateResults();
         this.lazyLoad();
     }
 
     render() {
         const { movie } = this.props;
-        console.log(movie);
         return (
             <div className="wrapper__results__movie__container">
                 <img data-src={movie.Poster} alt="" />

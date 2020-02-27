@@ -12,16 +12,24 @@ export default function (state = initialState, action) {
         case TYPE.SEARCH_MOVIE:
             return {
                 ...state,
-                text    : action.payload,
-                loading : false
+                text: action.payload,
+                loading: false
             }
         case TYPE.FETCH_MOVIES:
-            console.log("Payload",action.payload.Search)            
             return {
                 ...state,
-                movies  : action.payload.Search
+                movies: action.payload.Search
             }
-
+        case TYPE.FETCH_BY_MOVIE:
+            return{
+                ...state,
+                movies: action.payload.Search
+            }
+        case TYPE.FETCH_BY_SERIES:
+            return{
+                ...state,
+                movies: action.payload.Search
+            }
         default:
             return state;
     }
