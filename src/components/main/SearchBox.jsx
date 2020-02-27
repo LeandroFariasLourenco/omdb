@@ -1,6 +1,6 @@
 import React, { Component }               from 'react'
 import { searchMovie , fetchMovies }      from "./../../redux/actions";
-import searchIcon                         from "./../../images/search-icon.png";
+import searchIcon                         from "./../../images/movie_logo.png";
 import { connect }                        from "react-redux";
 
 class SearchBox extends Component {
@@ -10,7 +10,6 @@ class SearchBox extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault();
-        // document.querySelector(".wrapper__results").innerHTML = "";
         this.props.fetchMovies(this.props.text);
     }
 
@@ -33,6 +32,13 @@ class SearchBox extends Component {
                     name="searchText"
                     onChange={this.handleOnChange}
                 />
+                <select 
+                    name="type" 
+                    className="wrapper__search__form__select">
+                    <option value="all">All</option>
+                    <option value="movie">Movies</option>
+                    <option value="series">Series</option>
+                </select>
                 <button 
                     type="submit" 
                     className="wrapper__search__form__btn">

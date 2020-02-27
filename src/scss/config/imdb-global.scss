@@ -35,6 +35,12 @@ a{
     }
 }
 
+body{
+    background-image: url(https://cdn.hipwallpaper.com/i/26/76/IqdwlC.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .js--lazyloading{
     background: linear-gradient(90deg, #dfdfdf 8%,#d6d6d6 18%,#dfdfdf 33%);
     background-size: 800px 104px;
@@ -42,7 +48,7 @@ a{
     color: transparent;
     transition: all .3s;
     animation-name: placeloader-lazyload;
-    animation-duration: 500ms;
+    animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
