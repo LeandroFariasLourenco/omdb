@@ -1,0 +1,63 @@
+@import "./../config/imdb-global.scss";
+@import "./../config/imdb-variables.scss";
+@import "./../config/imdb-breakpoints.scss";
+
+@include mobile{
+    .wrapper{
+        padding: 25px 35px;
+        &__search{
+            max-height: fit-content;
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 15px 10px;
+            &__text{
+                font-size: 1.3rem;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                img{
+                    width: 70px;
+                    margin: 5px 0;
+                }
+            }
+            &__form{
+                padding: 0;
+                &__input{
+                    width: 100%;
+                    padding: 5px 44px;
+                    padding-right: 0;
+                    font-size: 1rem;
+                    background-position-x: 10px;
+                    background-size: 20px 20px;
+                }
+                &__select{
+                    width: 100%;
+                    margin: 0;
+                }
+                &__btn{
+                    margin-top: 20px;
+                    padding: 10px 30px;
+                }
+            }
+        }
+        &__results{
+            &__movie{
+                flex-direction: column;
+                align-items: center;
+                &__container{
+                    margin: 0;
+                    width: 85%;
+                    max-width: initial;
+                }
+                &__empty{
+                    padding: 20px 10px;
+                    span{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
