@@ -34,3 +34,25 @@ a{
         text-decoration: none;
     }
 }
+
+.js--lazyloading{
+    background: linear-gradient(90deg, #dfdfdf 8%,#d6d6d6 18%,#dfdfdf 33%);
+    background-size: 800px 104px;
+    font-size: 0;
+    color: transparent;
+    transition: all .3s;
+    animation-name: placeloader-lazyload;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes placeloader-lazyload {
+    0% {
+        background-position: 418px;
+    }
+    100% {
+        background-position: -418px;
+    }
+}

@@ -1,10 +1,13 @@
 import React from 'react'
+import emptyImg from './../../images/empty.png';
 
-function EmptySearch() {
+const EmptySearch = props => {
     return (
-        <div>
-            Found no results
-        </div>  
+        <div className="wrapper__results__movie__empty">
+            <img src={emptyImg} alt="" />
+            <span>Sorry, there were no results found for</span> 
+            <span>{props.text}</span>
+        </div>
     )
 }
 

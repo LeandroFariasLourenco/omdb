@@ -10,6 +10,7 @@ class SearchBox extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault();
+        // document.querySelector(".wrapper__results").innerHTML = "";
         this.props.fetchMovies(this.props.text);
     }
 

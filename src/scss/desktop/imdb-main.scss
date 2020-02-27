@@ -17,7 +17,7 @@
       background: rgb(70, 61, 61);
       display: flex;
       flex-flow: row wrap;
-      padding: 25px 50px;
+      padding: 15px 50px;
       max-width: 1420px;
       &__text {
         text-align: center;
@@ -43,7 +43,7 @@
         &__input {
           width: 100%;
           border-radius: 5px 6px 5px 6px;
-          padding: 10px;
+          padding: 5px;
           margin: 10px 0;
           font-size: 1.2rem;
           border: 2px solid transparent;
@@ -83,21 +83,45 @@
         &__container {
           flex-grow: 1;
           width: 33.33%;
-          max-width: 33.33%;
+          max-width: calc(33.33% - 10px);
           max-height: 450px;
           display: flex;
           justify-content: center;
           margin: 20px 0;
+          &:nth-child(3n + 2){
+            margin: 20px 10px;
+          }
           img {
             border: 2px solid black;
             min-height: 450px;
-            max-width: 100%;
+            &.js--lazyloading{
+              min-width: 304px;
+            }
+            max-width: 304px;
             cursor: pointer;
             transition: 200ms;
             &:hover{
               border: 2px solid rgb(255, 2, 2);
               box-shadow: 0 0 20px rgb(231, 0, 0);
               transition: 200ms;
+            }
+          }
+        }
+        &__empty{
+          width: 100%;
+          padding: 20px;
+          background: rgb(51, 49, 49);
+          box-shadow: 0 0 20px rgb(51, 49, 49);
+          img{
+            width: 170px;
+            display: block;
+            margin: 0 auto;
+          }
+          span{
+            color: white;
+            display: block;
+            &:nth-of-type(2){
+              text-align: center;
             }
           }
         }
