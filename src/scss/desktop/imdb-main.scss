@@ -19,6 +19,8 @@
       flex-flow: row wrap;
       padding: 15px 50px;
       max-width: 1420px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px black;
       &__text {
         text-align: center;
         width: 100%;
@@ -92,10 +94,24 @@
           flex-grow: 1;
           width: 33.33%;
           max-width: calc(33.33% - 10px);
-          max-height: 450px;
           display: flex;
           justify-content: center;
           margin: 20px 0;
+          flex-flow: row wrap;
+          color: white;
+          .title,
+          .release{
+            text-align: center;
+            display: block;
+            width: 100%;
+          }
+          .title{
+            font-size: 1rem;
+          }
+          .release{
+            font-style: italic;
+            font-size: 0.9rem;
+          }
           &:nth-child(3n + 2){
             margin: 20px 10px;
           }

@@ -41,8 +41,7 @@ export class MovieCard extends Component {
         this.lazyLoad();
     }
 
-    componentDidUpdate(){
-        console.log("ATUALIZOU");        
+    componentDidUpdate(){        
         this.updateResults();
         this.lazyLoad();
     }
@@ -51,7 +50,10 @@ export class MovieCard extends Component {
         const { movie } = this.props;
         return (
             <div className="wrapper__results__movie__container">
-                <img data-src={movie.Poster} alt="" />
+                <img data-src={movie.Poster} alt={movie.Title} />
+                {console.log(movie)}
+                <h2 className="title">{movie.Title}</h2>  
+                <h3 className="release">{movie.Year}</h3>              
             </div>
         )
     }
