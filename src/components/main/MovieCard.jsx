@@ -1,47 +1,47 @@
 import React, { Component } from 'react'
-
+import Fade from "react-reveal/Fade";
 export class MovieCard extends Component {
-    lazyLoad () {
-        function loadElement (elementToLazy) {
+    lazyLoad() {
+        function loadElement(elementToLazy) {
             const src = elementToLazy.getAttribute("data-src");
-            elementToLazy.setAttribute("src",src);
+            elementToLazy.setAttribute("src", src);
         }
         const lazyElements = document.querySelectorAll("[data-src]");
-        
-        const newObserver = new IntersectionObserver((entries , observer) => {
+
+        const newObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach((entry) => {
-                if(!entry.isIntersecting){
+                if (!entry.isIntersecting) {
                     return;
                 }
                 const element = entry.target;
                 observer.unobserve(element);
                 loadElement(element);
-                element.addEventListener("load" , () => {
+                element.addEventListener("load", () => {
                     element.classList.remove("js--lazyloading");
                 })
-                
+
             })
-        } , {root : null , threshold : 0.5})
-        
+        }, { root: null, threshold: 0.65 })
+
         Array.from(lazyElements).forEach((lazyElement) => {
             lazyElement.classList.add("js--lazyloading");
             newObserver.observe(lazyElement);
         })
     }
 
-    updateResults () {
+    updateResults() {
         const loadedElements = document.querySelectorAll(".wrapper__results__movie__container [src]")
         Array.from(loadedElements).forEach((loadedElement) => {
             loadedElement.classList.add("js--lazyloading");
-            loadedElement.setAttribute("src",'');
+            loadedElement.setAttribute("src", '');
         })
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.lazyLoad();
     }
 
-    componentDidUpdate(){        
+    componentDidUpdate() {
         this.updateResults();
         this.lazyLoad();
     }
@@ -49,12 +49,14 @@ export class MovieCard extends Component {
     render() {
         const { movie } = this.props;
         return (
-            <div className="wrapper__results__movie__container">
-                <img data-src={movie.Poster} alt={movie.Title} />
-                {console.log(movie)}
-                <h2 className="title">{movie.Title}</h2>  
-                <h3 className="release">{movie.Year}</h3>              
-            </div>
+
+            <Fade>
+                <div className="wrapper__results__movie__container">
+                    <img data-src={movie.Poster} />
+                    <h2 className="title">{movie.Title}</h2>
+                    <h3 className="release">{movie.Year}</h3>
+                </div>
+            </Fade>
         )
     }
 }

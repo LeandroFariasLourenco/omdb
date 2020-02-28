@@ -35,6 +35,12 @@ class Mobile extends Component {
                         <li className="container__header__nav__lists__item">
                             <a href="">OMDB</a>
                         </li>
+                        <div className="container__header__nav__lists__icon">
+                            <a href="https://github.com/LeandroFariasLourenco" target="_blank">
+                                <img src="https://avatars0.githubusercontent.com/u/54819000?s=460&v=4"/>
+                            </a>
+                            <span>Leandro</span>
+                        </div>
                     </ul>
                 </nav>
             </div>
