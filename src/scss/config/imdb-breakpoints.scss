@@ -8,3 +8,9 @@
         @content;
     }
 }
+
+@mixin breakpoint-sm($min-breakpoint , $max-breakpoint){
+    @media only screen and(min-width:$min-breakpoint) and (max-width:$max-breakpoint){
+        @content;
+    }
+}
