@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux';
 import { EmptySearch } from "./EmptySearch.jsx";
 import MovieCard from "./MovieCard";
 
 export class Movies extends Component {
-    render() {  
+    render() {
         const { movies } = this.props;
         let content;
-        
+
         movies !== undefined ? content = movies.map((movie, index) => {
             if (movie.Poster == "N/A") {
                 return;
@@ -18,19 +18,19 @@ export class Movies extends Component {
                     movie={movie}
                 />
             )
-        }) : content = <EmptySearch text={this.props.text}/>;
+        }) : content = <EmptySearch text={this.props.text} />;
         console.log("CONTENT", content);
         return (
-            <div className="wrapper__results__movie">
+            <Fragment>
                 {content}
-            </div>
+            </Fragment>
         )
     }
 }
 
 const mapStateToProps = state => ({
     movies: state.movies.movies,
-    text  : state.movies.text
+    text: state.movies.text
 })
 
-export default connect(mapStateToProps)(Movies)
+export default connect(mapStateToProps)(Movies);

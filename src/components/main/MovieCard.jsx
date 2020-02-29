@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 export class MovieCard extends Component {
     lazyLoad() {
@@ -51,10 +52,13 @@ export class MovieCard extends Component {
         return (
 
             <Fade>
-                <div className="wrapper__results__movie__container">
+                <div className="wrapper__results__container">
                     <img data-src={movie.Poster} />
                     <h2 className="title">{movie.Title}</h2>
                     <h3 className="release">{movie.Year}</h3>
+                    <Link className="details" to={`/movie/ ${movie.imdbID}`}>
+                        Movie Details
+                    </Link>
                 </div>
             </Fade>
         )

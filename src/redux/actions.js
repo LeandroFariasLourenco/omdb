@@ -5,7 +5,8 @@ const TYPE = {
     SEARCH_MOVIE    : "SEARCH_MOVIE",
     FETCH_MOVIES    : "FETCH_MOVIES",
     FETCH_BY_MOVIE  : "FETCH_BY_MOVIE",
-    FETCH_BY_SERIES : "FETCH_BY_SERIES"
+    FETCH_BY_SERIES : "FETCH_BY_SERIES",
+    FETCH_MOVIE     : "FETCH_MOVIE"
 }
 
 const searchMovie = text => dispatch => {
@@ -39,4 +40,13 @@ const fetchBySeries = ( text , select ) => dispatch => {
     .catch(err => console.log(err));
 }
 
-export { TYPE, searchMovie, fetchMovies , fetchByMovie , fetchBySeries};
+const fetchMovie = id => dispatch => {
+    id = id.replace(/ /g, '%20');
+    axios.get(`${API.APIUrl}${API.APIKey}&i=${id}`).then(response => dispatch ({
+        type: TYPE.FETCH_MOVIE,
+        payload: response.data
+    }))
+    .catch(err => console.log(err));
+}
+
+export { TYPE, searchMovie, fetchMovies , fetchByMovie , fetchBySeries , fetchMovie };

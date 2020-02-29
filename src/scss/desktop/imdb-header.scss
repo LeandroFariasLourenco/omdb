@@ -2,65 +2,64 @@
 @import "./../config/imdb-variables.scss";
 @import "./../config/imdb-breakpoints.scss";
 
-@include desktop{
-    header{
-        .container{
-            width: 100%;
-            height: 110px;
-            padding: 10px 50px;
-            background: $main-color;
-            &__header{
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                h1{
-                    cursor: pointer;
-                    color: white;
+@include desktop {
+  header {
+    width: 100%;
+    height: 110px;
+    padding: 10px 50px;
+    background: $main-color;
+
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      h1 {
+        cursor: pointer;
+        color: white;
+      }
+      &__navbar {
+        flex-grow: 1;
+        margin: 0 20px;
+        ul {
+          display: flex;
+          justify-content: space-evenly;
+          li {
+            a {
+              color: white;
+              &:after {
+                content: "";
+                display: block;
+                width: 10%;
+                margin: 0 auto;
+                height: 3px;
+                background: #ffffff;
+                border-radius: 5px;
+                transition: width 200ms;
+              }
+              &:hover {
+                &:after {
+                  width: 80%;
+                  transition: width 200ms;
                 }
-                &__navbar{
-                    flex-grow: 1;
-                    margin: 0 20px;
-                    ul{
-                        display: flex;
-                        justify-content: space-evenly;
-                        li{
-                            a{
-                                color: white;
-                                &:after{
-                                    content: '';
-                                    display: block;
-                                    width: 10%;
-                                    margin: 0 auto;
-                                    height: 3px;
-                                    background: #ffffff;
-                                    border-radius: 5px;
-                                    transition: width 200ms;
-                                }
-                                &:hover{
-                                    &:after{
-                                        width: 80%;
-                                        transition: width 200ms;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                &__logos{
-                    flex-grow: 1;
-                    height: 100%;
-                    max-width: 235px;
-                    img{
-                        margin: 0 10px;
-                        width: calc(50% - 20px);
-                        height: 100%;
-                        min-width: calc(50% - 20px);
-                        min-height: 80px;
-                    }
-                }
+              }
             }
+          }
         }
+      }
+      &__logos {
+        flex-grow: 1;
+        height: 100%;
+        max-width: 235px;
+        img {
+          margin: 0 10px;
+          width: calc(50% - 20px);
+          height: 100%;
+          min-width: calc(50% - 20px);
+          min-height: 80px;
+        }
+      }
     }
+  }
 }

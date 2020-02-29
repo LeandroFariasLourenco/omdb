@@ -30,6 +30,11 @@ export default function (state = initialState, action) {
                 ...state,
                 movies: action.payload.Search
             }
+        case TYPE.FETCH_MOVIE:
+            return{
+                ...state,
+                movie: action.payload
+            }
         default:
             return state;
     }
