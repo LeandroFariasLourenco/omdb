@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
-import { searchMovie, fetchMovies, fetchByMovie, fetchBySeries } from "./../../redux/actions";
+import { searchMovie, 
+         fetchMovies, 
+         fetchByMovie, 
+         fetchBySeries,
+         setLoading
+        } from "./../../redux/actions";
 import searchIcon from "./../../images/movie_logo.png";
 import { connect } from "react-redux";
 
@@ -9,11 +14,20 @@ class SearchBox extends Component {
         const selectValue = this.typeRequest.value;
         switch (selectValue) {
             case "all":
-                return this.props.fetchMovies(this.props.text);
+                return (
+                    this.props.setLoading(),
+                    this.props.fetchMovies(this.props.text) 
+                );
             case "movie":
-                return this.props.fetchByMovie(this.props.text , selectValue);
+                return ( 
+                    this.props.setLoading(),
+                    this.props.fetchByMovie(this.props.text , selectValue)
+                );
             case "series":
-                return this.props.fetchBySeries(this.props.text , selectValue);
+                return (
+                    this.props.setLoading(),
+                    this.props.fetchBySeries(this.props.text , selectValue)
+                );
             default:
                 return;
         }
@@ -67,4 +81,9 @@ const mapStateToProps = state => ({
     text: state.movies.text
 })
 
-export default connect(mapStateToProps, { searchMovie, fetchMovies , fetchByMovie , fetchBySeries})(SearchBox);
+export default connect(mapStateToProps, { searchMovie, 
+        fetchMovies , 
+        fetchByMovie , 
+        fetchBySeries , 
+        setLoading
+    })(SearchBox);

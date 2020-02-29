@@ -1,14 +1,14 @@
-import React from 'react'
+import React , { Fragment } from 'react'
 import loadingGif from "./../../images/spinner.gif";
 
 function Loading() {
     return (
-        <div>
+        <Fragment>
             <img 
                 src={loadingGif} 
                 alt=""                
                 />
-        </div>
+        </Fragment>
     )
 }
 

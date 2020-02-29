@@ -6,7 +6,8 @@ const TYPE = {
     FETCH_MOVIES    : "FETCH_MOVIES",
     FETCH_BY_MOVIE  : "FETCH_BY_MOVIE",
     FETCH_BY_SERIES : "FETCH_BY_SERIES",
-    FETCH_MOVIE     : "FETCH_MOVIE"
+    FETCH_MOVIE     : "FETCH_MOVIE",
+    LOADING         : "LOADING"
 }
 
 const searchMovie = text => dispatch => {
@@ -49,4 +50,10 @@ const fetchMovie = id => dispatch => {
     .catch(err => console.log(err));
 }
 
-export { TYPE, searchMovie, fetchMovies , fetchByMovie , fetchBySeries , fetchMovie };
+const setLoading = () => {
+    return {
+        type: TYPE.LOADING
+    };
+}
+
+export { TYPE, searchMovie, fetchMovies , fetchByMovie , fetchBySeries , fetchMovie , setLoading};

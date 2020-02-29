@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { EmptySearch } from "./EmptySearch.jsx";
 import MovieCard from "./MovieCard";
 
-export class Movies extends Component {
+export class MoviesContainer extends Component {
     render() {
         const { movies } = this.props;
         let content;
@@ -33,4 +33,4 @@ const mapStateToProps = state => ({
     text: state.movies.text
 })
 
-export default connect(mapStateToProps)(Movies);
+export default connect(mapStateToProps)(MoviesContainer);

@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
-import Movies               from './Movies';
+import MoviesContainer      from './MoviesContainer';
 import { Loading }          from './Loading';
 import { connect }          from 'react-redux';
 
 class Showcase extends Component {
     render() {
-        const { loading } = this.props;
-        console.log(loading);
         return (
             <div className="wrapper__results">
-                { loading ? <Loading/> : <Movies/>}
+                { this.props.loading ? <Loading/> : <MoviesContainer/>}
             </div>
         )
     }

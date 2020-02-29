@@ -16,9 +16,13 @@
       max-width: 1420px;
       margin: 10px 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.8);
       display: flex;
       flex-flow: row wrap;
+      > img:first-child{
+        width: 150px;
+        margin: 0 auto;
+        display: block;
+      }
       &__container {
         flex-grow: 1;
         width: 33.33%;
