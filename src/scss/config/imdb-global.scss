@@ -39,6 +39,20 @@ body{
     background-image: url(https://cdn.hipwallpaper.com/i/26/76/IqdwlC.jpg);
     background-size: cover;
     background-attachment: fixed;
+
+    &::-webkit-scrollbar{
+        width: 8px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: rgba(78, 75, 75,.5);
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover{
+        background: rgba(78, 75, 75,1);
+    }
+    &::-webkit-scrollbar-track{
+        background: rgba(27, 26, 26, 1);
+    }
 }
 
 .js--lazyloading{
@@ -62,3 +76,4 @@ body{
         background-position: -418px;
     }
 }
+

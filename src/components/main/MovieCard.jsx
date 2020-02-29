@@ -56,7 +56,7 @@ export class MovieCard extends Component {
                     <img data-src={movie.Poster} />
                     <h2 className="title">{movie.Title}</h2>
                     <h3 className="release">{movie.Year}</h3>
-                    <Link className="details" to={`/movie/ ${movie.imdbID}`}>
+                    <Link className="details" to={`/movie/${movie.imdbID}`}>
                         Movie Details
                     </Link>
                 </div>
