@@ -11,7 +11,7 @@ function App() {
         <Provider store={store}>
             <Router>
                 <section className="wrapper">
-                    <SearchBox />
+                    <Route exact path="/" component={SearchBox}/>
                     <Route exact path="/" component={Showcase}/>
                     <Route exact path="/movie/:id" component={Movie}/>
                 </section>

@@ -9,6 +9,7 @@ export class MoviesContainer extends Component {
         let content;
 
         movies !== undefined ? content = movies.map((movie, index) => {
+            console.log(movie);
             if (movie.Poster == "N/A") {
                 return;
             }

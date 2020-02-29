@@ -5,6 +5,7 @@ function Loading() {
     return (
         <Fragment>
             <img 
+                className="loading"
                 src={loadingGif} 
                 alt=""                
                 />

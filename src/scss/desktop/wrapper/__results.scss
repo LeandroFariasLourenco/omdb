@@ -11,6 +11,12 @@
     flex-flow: row wrap;
     justify-content: center;
     padding: 14px 50px;
+    img.loading{
+      width: 240px;
+      height: 240px;
+      margin: 0 auto;
+      display: block;
+    }
 
     &__results {
       max-width: 1420px;
@@ -18,11 +24,7 @@
       width: 100%;
       display: flex;
       flex-flow: row wrap;
-      > img:first-child{
-        width: 150px;
-        margin: 0 auto;
-        display: block;
-      }
+      
       &__container {
         flex-grow: 1;
         width: 33.33%;
