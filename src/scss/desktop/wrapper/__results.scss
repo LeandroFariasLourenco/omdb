@@ -1,0 +1,93 @@
+@import "./../../config/imdb-global.scss";
+@import "./../../config/imdb-variables.scss";
+@import "./../../config/imdb-breakpoints.scss";
+
+@include desktop {
+  .wrapper {
+    min-height: calc(100vh - (110px + 50px));
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 14px 50px;
+
+    &__results {
+      max-width: 1420px;
+      margin: 10px 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      flex-flow: row wrap;
+      &__container {
+        flex-grow: 1;
+        width: 33.33%;
+        max-width: calc(33.33% - 10px);
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        flex-flow: row wrap;
+        color: white;
+        .title,
+        .release {
+          text-align: center;
+          display: block;
+          width: 100%;
+        }
+        .title {
+          font-size: 1rem;
+        }
+        .release {
+          font-style: italic;
+          font-size: 0.9rem;
+        }
+        &:nth-child(3n + 2) {
+          margin: 20px 10px;
+        }
+        img {
+          border: 2px solid black;
+          min-height: 450px;
+          &.js--lazyloading {
+            min-width: 304px;
+          }
+          max-width: 304px;
+          cursor: pointer;
+          transition: 200ms;
+          &:hover {
+            border: 2px solid rgb(255, 2, 2);
+            box-shadow: 0 0 20px rgb(231, 0, 0);
+            transition: 200ms;
+          }
+        }
+        .details {
+          padding: 10px 20px;
+          background: blue;
+          border-radius: 10px;
+          color: white;
+        }
+      }
+      &__empty {
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        img {
+          width: 170px;
+          display: block;
+          margin: 0 auto;
+        }
+        span {
+          text-align: center;
+          color: white;
+          display: block;
+          &:nth-of-type(2) {
+            text-align: center;
+          }
+          &:nth-of-type(3) {
+            text-align: center;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+}

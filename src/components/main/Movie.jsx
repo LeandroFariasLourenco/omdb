@@ -5,15 +5,14 @@ import { fetchMovie } from "./../../redux/actions";
 class Movie extends Component {
     componentDidMount(){
         this.props.fetchMovie(this.props.match.params.id);
-        console.log(this.props.movie);
-        console.log(this.props);
     }
 
     render() {
+        console.log(this.props);
         return (
-            <div>
+            <section className="wrapper__movie">
                 <img src={this.props.movie.Poster}/>
-            </div>
+            </section>
         )
     }
 }

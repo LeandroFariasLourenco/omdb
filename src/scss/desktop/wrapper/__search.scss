@@ -1,0 +1,86 @@
+@import "./../../config/imdb-global.scss";
+@import "./../../config/imdb-variables.scss";
+@import "./../../config/imdb-breakpoints.scss";
+
+@include desktop {
+  .wrapper {
+    min-height: calc(100vh - (110px + 50px));
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 14px 50px;
+    &__search {
+      width: 100%;
+      max-height: 210px;
+      background: rgb(70, 61, 61);
+      display: flex;
+      flex-flow: row wrap;
+      padding: 15px 50px;
+      max-width: 1420px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px black;
+      &__text {
+        text-align: center;
+        width: 100%;
+        color: white;
+        font-size: 1.6rem;
+        letter-spacing: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 50px;
+          margin: 0 10px;
+        }
+      }
+      &__form {
+        width: 100%;
+        height: auto;
+        padding: 0 20px;
+        &__input {
+          width: calc(70% - 20px);
+          border-radius: 5px 6px 5px 6px;
+          padding: 5px 60px;
+          margin: 10px 0;
+          font-size: 1.2rem;
+          border: 2px solid transparent;
+          transition: border 200ms;
+          position: relative;
+          background-image: url("./../../../images/search-icon.png");
+          background-position: left;
+          background-repeat: no-repeat;
+          background-size: 30px 30px;
+          background-position-x: 15px;
+          &:focus {
+            border: 2px solid black;
+            transition: border 200ms;
+          }
+        }
+        &__select {
+          width: 30%;
+          margin: 0 10px;
+          padding: 10px;
+        }
+        &__btn {
+          margin: 0 auto;
+          display: block;
+          padding: 10px 15px;
+          background: rgb(5, 62, 148);
+          color: white;
+          font-size: 1.2rem;
+          box-shadow: rgb(5, 62, 148);
+          border: 1px solid transparent;
+          transition: 400ms;
+          border-radius: 5px;
+          &:hover {
+            transition: 400ms;
+            background: #000000;
+            border: 1px solid cyan;
+          }
+        }
+      }
+    }
+  }
+}

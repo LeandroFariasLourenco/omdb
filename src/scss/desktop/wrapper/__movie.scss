@@ -1,0 +1,19 @@
+@import "./../../config/imdb-global.scss";
+@import "./../../config/imdb-variables.scss";
+@import "./../../config/imdb-breakpoints.scss";
+
+@include desktop {
+  .wrapper {
+    min-height: calc(100vh - (110px + 50px));
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 14px 50px;
+
+    &__movie{
+
+    }
+  }
+}
