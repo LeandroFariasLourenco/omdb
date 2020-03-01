@@ -1,0 +1,63 @@
+.wrapper {
+  padding: 30px 15px;
+  &__movie {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    padding: 0;
+    max-height: initial;
+    &__poster {
+      width: 100%;
+      max-width: initial;
+      margin-bottom: 10px;
+      img {
+        width: 100%;
+      }
+    }
+    &__informations {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      &:not(:first-child) {
+        margin: 20px 0;
+      }
+      h2 {
+        text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+      .content {
+        background: rgba(66, 64, 64, 0.6);
+        border-radius: 5px;
+        border: 1.5px outset black;
+        width: 100%;
+        padding: 15px;
+        &:not(:first-child) {
+          margin: 10px 0;
+        }
+        span {
+          color: white;
+          font-size: 1.5rem;
+          display: block;
+        }
+        p {
+          padding-left: 20px;
+          color: white;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .redirect {
+      margin: 0 auto;
+      display: block;
+      padding: 10px 20px;
+      background: blue;
+      color: white;
+      border-radius: 5px;
+      box-shadow: 0 0 10px blue;
+    }
+  }
+}

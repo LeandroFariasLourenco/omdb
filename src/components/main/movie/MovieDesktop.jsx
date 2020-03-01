@@ -1,14 +1,14 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { Loading } from "./Loading";
+import { Loading } from "./../Loading";
 import Flip from "react-reveal";
 import {
     fetchMovie,
     setLoading
-} from "./../../redux/actions";
+} from "./../../../redux/actions";
 
-class Movie extends Component {
+class MovieDesktop extends Component {
     componentDidMount() {
         this.props.setLoading();
         this.props.fetchMovie(this.props.match.params.id);
@@ -84,4 +84,4 @@ const mapStateToProps = state => ({
     movie: state.movies.movie
 })
 
-export default connect(mapStateToProps, { fetchMovie, setLoading })(Movie);
+export default connect(mapStateToProps, { fetchMovie, setLoading })(MovieDesktop);

@@ -1,132 +1,116 @@
-@import "./../../config/imdb-global.scss";
-@import "./../../config/imdb-variables.scss";
-@import "./../../config/imdb-breakpoints.scss";
-
-@include desktop {
-  .wrapper {
-    min-height: calc(100vh - (110px + 50px));
+&__movie {
+  transition: all ease-in 500000ms;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  max-width: 1420px;
+  max-height: 568px;
+  &__poster {
+    max-width: 25%;
     height: auto;
-    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column;
+    img {
+      border: 1px solid black;
+      box-shadow: 0 0 20px rgb(29, 23, 21);
+    }
+    .btn {
+      padding: 10px 20px;
+      background: rgb(2, 59, 145);
+      color: white;
+      border-radius: 5px;
+      text-align: center;
+      border: 1px solid transparent;
+      transition: 200ms;
+      &:hover {
+        background: black;
+        border: 1px solid cyan;
+        transition: 200ms;
+      }
+    }
+  }
+  &__description {
+    margin-left: 50px;
+    max-width: calc((100% - 25%) - 50px);
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    padding: 14px 50px;
-
-    &__movie {
-      transition: all ease-in 500000ms;
+    flex-grow: 1;
+    span {
+      color: white;
+    }
+    .title {
+      height: 50%;
+      span {
+        display: block;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+    }
+    .informations {
+      height: 50%;
+      margin-left: 10px;
+      span {
+        font-size: 1.1rem;
+        display: block;
+      }
+    }
+    .others {
       width: 100%;
-      padding: 10px 20px;
+      height: 50%;
       display: flex;
-      max-width: 1420px;
-      max-height: 568px;
-      &__poster {
-        max-width: 25%;
-        height: auto;
-        display: flex;
-        justify-content: space-around;
-        flex-flow: column;
-        img {
-          border: 1px solid black;
-          box-shadow: 0 0 20px rgb(29, 23, 21);
+      &__content {
+        flex: 1;
+        max-height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px 5px;
+        border: 2px solid black;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          width: 8px;
         }
-        .btn{
-            padding: 10px 20px;
-            background: rgb(2, 59, 145);
+        &::-webkit-scrollbar-thumb {
+          background: rgba(78, 75, 75, 0.5);
+          border-radius: 10px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+          background: rgba(78, 75, 75, 1);
+        }
+        &::-webkit-scrollbar-track {
+          background: rgba(27, 26, 26, 1);
+        }
+        &__informations {
+          background: rgba(66, 61, 61, 0.2);
+          padding: 5px 20px;
+          border-radius: 5px;
+          box-shadow: 0 0 20px rgba(66, 61, 61, 0.2);
+          &:not(:first-child) {
+            margin: 10px 0;
+          }
+          span {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: bold;
+            font-style: italic;
+          }
+          p {
             color: white;
-            border-radius: 5px;
-            text-align: center;
-            border: 1px solid transparent;
-            transition: 200ms;
-            &:hover{
-                background: black;
-                border: 1px solid cyan;
-                transition: 200ms;
+            &::first-letter {
+              margin-left: 10px;
+              font-size: 1.1rem;
+              font-weight: bold;
             }
+          }
         }
       }
-      &__description {
-        margin-left: 50px;
-        max-width: calc((100% - 25%) - 50px);
-        display: flex;
-        flex-flow: row wrap;
-        flex-grow: 1;
-        span {
-          color: white;
-        }
-        .title {
-          height: 50%;
-          span {
-            display: block;
-            font-weight: bold;
-            font-size: 1.1rem;
-          }
-        }
-        .informations {
-          height: 50%;
-          margin-left: 10px;
-          span {
-            font-size: 1.1rem;
-            display: block;
-          }
-        }
-        .others {
-          width: 100%;
-          height: 50%;
-          display: flex;
-          &__content {
-            flex: 1;
-            max-height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 10px 5px;
-            border: 2px solid black;
-            overflow-y: auto;
-            &::-webkit-scrollbar{
-                width: 8px;
-            }
-            &::-webkit-scrollbar-thumb{
-                background: rgba(78, 75, 75,.5);
-                border-radius: 10px;
-            }
-            &::-webkit-scrollbar-thumb:hover{
-                background: rgba(78, 75, 75,1);
-            }
-            &::-webkit-scrollbar-track{
-                background: rgba(27, 26, 26, 1);
-            }
-            &__informations {
-                background: rgba(66, 61, 61, .2);
-                padding: 5px 20px;
-                border-radius: 5px;
-                box-shadow: 0 0 20px rgba(66, 61, 61, .2);
-              &:not(:first-child) {
-                margin: 10px 0;
-              }
-              span {
-                display: block;
-                font-size: 1.1rem;
-                font-weight: bold;
-                font-style: italic;
-              }
-              p {
-                color: white;
-                &::first-letter {
-                  margin-left: 10px;
-                  font-size: 1.1rem;
-                  font-weight: bold;
-                }
-              }
-            }
-          }
-          &__rating {
-            flex: 0.3;
-            height: 100%;
-            text-align: center;
-            img{
-                width: 100px;
-                border-radius: 100%;
-                box-shadow: 0 0 20px black;
-            }
-          }
+      &__rating {
+        flex: 0.3;
+        height: 100%;
+        text-align: center;
+        img {
+          width: 100px;
+          border-radius: 100%;
+          box-shadow: 0 0 20px black;
         }
       }
     }

@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux';
-import { EmptySearch } from "./EmptySearch.jsx";
+import { EmptySearch } from "./../EmptySearch.jsx";
 import MovieCard from "./MovieCard";
 
 export class MoviesContainer extends Component {

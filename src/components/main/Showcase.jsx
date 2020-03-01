@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import MoviesContainer      from './MoviesContainer';
+import MoviesContainer      from './movie/MoviesContainer';
 import { Loading }          from './Loading';
 import { connect }          from 'react-redux';
 

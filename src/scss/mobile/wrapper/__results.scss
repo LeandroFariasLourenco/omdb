@@ -1,0 +1,22 @@
+.wrapper {
+  padding: 25px 35px;
+  &__results {
+    flex-direction: column;
+    &__container {
+      margin: 0;
+      width: 100%;
+      max-width: initial;
+      margin: 20px 0;
+    }
+    &__empty {
+      padding: 20px 10px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 20px black;
+      border-radius: 10px;
+      span {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
