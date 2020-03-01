@@ -4,7 +4,6 @@
 
 @include mobile {   
     main{
-        margin-top: 115px;
         @import "./wrapper/__results.scss";
         @import "./wrapper/__search.scss";
         @import "./wrapper/__movie.scss";
