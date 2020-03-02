@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/omdb/static/css/main.49501bf0.chunk.css",
+    "main.js": "/omdb/static/js/main.e9157b6b.chunk.js",
+    "main.js.map": "/omdb/static/js/main.e9157b6b.chunk.js.map",
+    "runtime-main.js": "/omdb/static/js/runtime-main.95dd5224.js",
+    "runtime-main.js.map": "/omdb/static/js/runtime-main.95dd5224.js.map",
+    "static/js/2.3d1d69f0.chunk.js": "/omdb/static/js/2.3d1d69f0.chunk.js",
+    "static/js/2.3d1d69f0.chunk.js.map": "/omdb/static/js/2.3d1d69f0.chunk.js.map",
+    "index.html": "/omdb/index.html",
+    "precache-manifest.fd949b9041777a5b8e989ed62d61265b.js": "/omdb/precache-manifest.fd949b9041777a5b8e989ed62d61265b.js",
+    "service-worker.js": "/omdb/service-worker.js",
+    "static/css/main.49501bf0.chunk.css.map": "/omdb/static/css/main.49501bf0.chunk.css.map",
+    "static/js/2.3d1d69f0.chunk.js.LICENSE.txt": "/omdb/static/js/2.3d1d69f0.chunk.js.LICENSE.txt",
+    "static/media/movie_logo.png": "/omdb/static/media/movie_logo.01f40a3a.png",
+    "static/media/react_logo.png": "/omdb/static/media/react_logo.3f7d6a65.png",
+    "static/media/spinner.gif": "/omdb/static/media/spinner.091bf88a.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.95dd5224.js",
+    "static/js/2.3d1d69f0.chunk.js",
+    "static/css/main.49501bf0.chunk.css",
+    "static/js/main.e9157b6b.chunk.js"
+  ]
+}
